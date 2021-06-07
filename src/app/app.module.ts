@@ -37,7 +37,11 @@ const routes: Routes = [
     canActivate: [OktaAuthGuard]
   },
   // {path: CALLBACK_PATH, component: OktaCallbackComponent}, // Doesn't work
-  {path: CALLBACK_PATH, component: CallbackComponent},
+  {
+    path: CALLBACK_PATH, 
+    pathMatch: 'full',
+    component: CallbackComponent
+  },
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: '**', redirectTo: '/', pathMatch: 'full'}
 ];
