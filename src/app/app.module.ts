@@ -30,8 +30,13 @@ import { CallbackComponent } from './callback/callback.component';
 const CALLBACK_PATH = 'login/callback';
 
 const routes: Routes = [
-  {path:'profile', component: ProfileComponent, canActivate: [OktaAuthGuard]},
-  // {path: CALLBACK_PATH, component: OktaCallbackComponent},
+  {
+    path:'profile', 
+    pathMatch: 'full',
+    component: ProfileComponent, 
+    canActivate: [OktaAuthGuard]
+  },
+  // {path: CALLBACK_PATH, component: OktaCallbackComponent}, // Doesn't work
   {path: CALLBACK_PATH, component: CallbackComponent},
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: '**', redirectTo: '/', pathMatch: 'full'}
