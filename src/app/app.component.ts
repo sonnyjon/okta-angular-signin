@@ -67,5 +67,6 @@ export class AppComponent implements OnDestroy
   {
     // Terminates the session with Okta and removes current tokens.
     this.oktaAuth.signOut();
+    sessionStorage.clear();
   }
 }
