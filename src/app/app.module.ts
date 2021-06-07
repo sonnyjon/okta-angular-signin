@@ -32,14 +32,14 @@ const CALLBACK_PATH = 'login/callback';
 const routes: Routes = [
   {
     path:'profile', 
-    pathMatch: 'full',
+    // pathMatch: 'full',
     component: ProfileComponent, 
     canActivate: [OktaAuthGuard]
   },
   // {path: CALLBACK_PATH, component: OktaCallbackComponent}, // Doesn't work
   {
     path: CALLBACK_PATH, 
-    pathMatch: 'full',
+    // pathMatch: 'full',
     component: CallbackComponent
   },
   {path: '', redirectTo: '/', pathMatch: 'full'},
