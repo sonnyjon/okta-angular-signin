@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row auth-div">
+        <div class="col-md-3">
+            <h4>Authenticated: {{isAuthenticated}}</h4>
+        </div>
+        <div class="col-md-3">
+            <button 
+                *ngIf="!isAuthenticated" 
+                class="btn btn-outline-primary"
+                (click)="login()">Login</button>
+            <button 
+                *ngIf="isAuthenticated"
+                class="btn btn-outline-danger"
+                (click)="logout()">Logout</button>
+        </div>
+    </div>
+    <div>
+        <hr>
+        <p *ngIf="!isAuthenticated">Click Login to authenticate through Okta</p>
+    </div>
+</div>
+<router-outlet></router-outlet>
