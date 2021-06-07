@@ -16,7 +16,7 @@ const env = environment;
 const config = {
   clientId: `${env.clientId}`,
   issuer: `https://${env.oktaDomain}/oauth2/default`,
-  redirectUri: `http://${env.oktaDomain}/login/callback`,
+  redirectUri: `${env.baseUrl}/login/callback`,
   scopes: ['openid', 'profile', 'email'],
   pkce: true
 };
