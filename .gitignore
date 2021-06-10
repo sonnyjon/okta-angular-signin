@@ -41,7 +41,6 @@ yarn-error.log
 testem.log
 /typings
 /src/environments/**
-README.md
 
 # System Files
 .DS_Store
